@@ -2,6 +2,42 @@
   text-align: center;
 }
 
+.center-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+
+.container_row{
+  display: grid;
+  grid-gap: 20px;
+}
+
+.layer1{
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.layer2 {
+  grid-column: 1;
+  grid-row: 2; 
+}
+
+.layer3 {
+  grid-column: 1;
+  grid-row: 3; 
+  justify-self: center;
+}
+
+textarea {
+  width: 600px;
+  height: 350px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
