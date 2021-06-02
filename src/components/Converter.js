@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import {
+  useParams
+} from "react-router-dom";
 
 let convert = (input) => {
   let output = ""
@@ -9,7 +12,9 @@ let convert = (input) => {
 }
 
 function Converter() {
-  const [converted_text, setConvertedText] = useState("Your converted text will appear here");
+  const { id } = useParams();
+  let  inital_text = id === undefined ? "Your converted text will appear here" : id
+  const [converted_text, setConvertedText] = useState(inital_text);
     return (
       <div>
         <h1>Evil Text to Binary Converter</h1>
